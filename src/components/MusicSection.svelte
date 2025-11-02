@@ -19,53 +19,47 @@
   import selfInflictedCover from "$song-covers/selfInflicted.jpg"
   import dohertyCover from "$song-covers/doherty.jpg"
   
-  onMount(() => {
-    for(let song of songs) {
-      song.audio = new Audio(song.audio)
-      song.audio.addEventListener("ended", () => changeSong(1) )
-    }
-  })
   const songs = [
     {
       title: "Neath the Grove Is a Heart",
       artist: "Yaelorke",
       start: 95,
-      audio: neathTheGroveIsAHeartAudio,
+      audioLink: neathTheGroveIsAHeartAudio,
       cover: neathTheGroveIsAHeartCover
     },
     {
       title: "Unsweetened Lemonade",
       artist: "Amélie Farren",
       start: 99,
-      audio: unsweetenedLemonadeAudio,
+      audioLink: unsweetenedLemonadeAudio,
       cover: unsweetenedLemonadeCover
     },
     {
       title: "Star Spangled",
       artist: "Amélie Farren",
       start: 118,
-      audio: starSpangledAudio,
+      audioLink: starSpangledAudio,
       cover: starSpangledCover
     },
     {
       title: "Little Caesar",
       artist: "seb lowe",
       start: 45,
-      audio: littleCaesarAudio,
+      audioLink: littleCaesarAudio,
       cover: littleCaesarCover
     },
     {
       title: "Self-Inflicted (Achromatic English Cover)",
       artist: "JubyPhonic",
       start: 118,
-      audio: selfInflictedAudio,
+      audioLink: selfInflictedAudio,
       cover: selfInflictedCover
     },
     {
       title: "Doherty",
       artist: "I dont Know",
       start: 0,
-      audio: dohertyAudio,
+      audioLink: dohertyAudio,
       cover: dohertyCover
     }
   ];
@@ -76,6 +70,10 @@
   function togglePlay(){
     isPlaying = !isPlaying
     if(isPlaying) {
+      if(!currentSong.audio) {
+        currentSong.audio = new Audio(currentSong.audioLink)
+        currentSong.audio.addEventListener("ended", () => changeSong(1) )
+      }
       currentSong.audio.currentTime = currentSong.start
       currentSong.audio.play()
     }
@@ -85,7 +83,9 @@
   }
   
   function changeSong(offset) {
-    currentSong.audio.pause()
+    if(currentSong.audio) {
+      currentSong.audio.pause()
+    }
 
     currentSongIndex = (( ( currentSongIndex + offset ) % songs.length ) + songs.length) % songs.length
     
