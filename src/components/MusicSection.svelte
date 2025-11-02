@@ -4,12 +4,12 @@
   import { onMount } from "svelte"
 
   //import songs
-  const neathTheGroveIsAHeartAudio = "/music/neath-the-grove-is-a-heart.mp3";
-  const unsweetenedLemonadeAudio = "/music/Unsweetened_Lemonade-Amélie_Farren.mp3";
-  const starSpangledAudio = "/music/Star Spangled - Amélie Farren.mp3";
-  const littleCaesarAudio = "/music/Little Caesar.mp3";
-  const selfInflictedAudio = "/music/Self-Inflicted_Achromatic English_Cover.mp3";
-  const dohertyAudio = "/music/doherty.mp3";
+  const neathTheGroveIsAHeartAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/neath-the-grove-is-a-heart.mp3"
+  const unsweetenedLemonadeAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Unsweetened-Lemonade-Amelie_Farren.mp3";
+  const starSpangledAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Star%20Spangled.mp3"
+  const littleCaesarAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Little%20Caesar.mp3";
+  const selfInflictedAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Self-Inflicted_Achromatic%20English_Cover.mp3"
+  const dohertyAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/doherty.mp3";
   
   //import song covers
   import neathTheGroveIsAHeartCover from "$song-covers/neathTheGrove.jpeg"
@@ -22,7 +22,6 @@
   onMount(() => {
     for(let song of songs) {
       song.audio = new Audio(song.audio)
-      song.audio.preload = "auto";       
       song.audio.addEventListener("ended", () => changeSong(1) )
     }
   })
