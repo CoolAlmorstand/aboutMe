@@ -22,6 +22,7 @@
   onMount(() => {
     for(let song of songs) {
       song.audio = new Audio(song.audio)
+      song.audio.preload = "auto";       
       song.audio.addEventListener("ended", () => changeSong(1) )
     }
   })
