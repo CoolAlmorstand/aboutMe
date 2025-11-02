@@ -4,12 +4,12 @@
   import { onMount } from "svelte"
 
   //import songs
-  import neathTheGroveIsAHeartAudio from "$music/neath-the-grove-is-a-heart.mp3"
-  import unsweetenedLemonadeAudio from "$music/Unsweetened_Lemonade-Amélie_Farren.mp3"
-  import starSpangledAudio from "$music/Star Spangled - Amélie Farren.mp3"
-  import littleCaesarAudio from "$music/Little Caesar.mp3"
-  import selfInflictedAudio from "$music/Self-Inflicted_Achromatic English_Cover.mp3"
-  import dohertyAudio from "$music/doherty.mp3"
+  const neathTheGroveIsAHeartAudio = "/music/neath-the-grove-is-a-heart.mp3";
+  const unsweetenedLemonadeAudio = "/music/Unsweetened_Lemonade-Amélie_Farren.mp3";
+  const starSpangledAudio = "/music/Star Spangled - Amélie Farren.mp3";
+  const littleCaesarAudio = "/music/Little Caesar.mp3";
+  const selfInflictedAudio = "/music/Self-Inflicted_Achromatic English_Cover.mp3";
+  const dohertyAudio = "/music/doherty.mp3";
   
   //import song covers
   import neathTheGroveIsAHeartCover from "$song-covers/neathTheGrove.jpeg"
