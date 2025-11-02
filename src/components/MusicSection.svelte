@@ -5,11 +5,11 @@
 
   //import songs
   const neathTheGroveIsAHeartAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/neath-the-grove-is-a-heart.mp3"
-  const unsweetenedLemonadeAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Unsweetened-Lemonade-Amelie_Farren.mp3";
-  const starSpangledAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Star%20Spangled.mp3"
-  const littleCaesarAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Little%20Caesar.mp3";
+  const unsweetenedLemonadeAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Unsweetened_Lemonade-Amelie_Farren.mp3"
+  const starSpangledAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/StarSpangled%20Amelie%20Farren.mp3"
+  const littleCaesarAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/LittleCaesar.mp3"
   const selfInflictedAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Self-Inflicted_Achromatic%20English_Cover.mp3"
-  const dohertyAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/doherty.mp3";
+  const dohertyAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Unsweetened_Lemonade-Amelie_Farren.mp3"
   
   //import song covers
   import neathTheGroveIsAHeartCover from "$song-covers/neathTheGrove.jpeg"
@@ -74,7 +74,7 @@
         currentSong.audio = new Audio(currentSong.audioLink)
         currentSong.audio.addEventListener("ended", () => changeSong(1) )
       }
-      currentSong.audio.currentTime = currentSong.start
+      //currentSong.audio.currentTime = currentSong.start
       currentSong.audio.play()
     }
     else {
