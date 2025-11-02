@@ -21,6 +21,13 @@
   
   const songs = [
     {
+      title: "Star Spangled",
+      artist: "Amélie Farren",
+      start: 118,
+      audioLink: starSpangledAudio,
+      cover: starSpangledCover
+    },
+    {
       title: "Neath the Grove Is a Heart",
       artist: "Yaelorke",
       start: 95,
@@ -33,13 +40,6 @@
       start: 99,
       audioLink: unsweetenedLemonadeAudio,
       cover: unsweetenedLemonadeCover
-    },
-    {
-      title: "Star Spangled",
-      artist: "Amélie Farren",
-      start: 118,
-      audioLink: starSpangledAudio,
-      cover: starSpangledCover
     },
     {
       title: "Little Caesar",
