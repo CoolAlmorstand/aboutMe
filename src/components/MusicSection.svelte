@@ -9,7 +9,8 @@
   const starSpangledAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/StarSpangled%20Amelie%20Farren.mp3"
   const littleCaesarAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/LittleCaesar.mp3"
   const selfInflictedAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Self-Inflicted_Achromatic%20English_Cover.mp3"
-  const dohertyAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Unsweetened_Lemonade-Amelie_Farren.mp3"
+  const neverAfrownAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/Golden%20Brown%20-%20without%20CC.mp3"
+  const dohertyAudio = "https://amrqqtynpyffwyitqkpu.supabase.co/storage/v1/object/public/FilesServer/doherty.mp3"
   
   //import song covers
   import neathTheGroveIsAHeartCover from "$song-covers/neathTheGrove.jpeg"
@@ -18,6 +19,7 @@
   import littleCaesarCover from "$song-covers/littleCaesar.jpeg"
   import selfInflictedCover from "$song-covers/selfInflicted.jpg"
   import dohertyCover from "$song-covers/doherty.jpg"
+  import neverAfrownCover from "$song-covers/neverAFrown.jpg"
   
   const songs = [
     {
@@ -33,6 +35,12 @@
       start: 95,
       audioLink: neathTheGroveIsAHeartAudio,
       cover: neathTheGroveIsAHeartCover
+    },
+    { 
+      title: "Never A From With Golden Brown",
+      audioLink: neverAfrownAudio,
+      artist: "stranglers",
+      cover: neverAfrownCover,
     },
     {
       title: "Unsweetened Lemonade",
